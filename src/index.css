@@ -32,6 +32,9 @@ nav > ul > li:hover{
 
 .progressbarContainer {
   width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .allActivities {
@@ -42,4 +45,16 @@ nav > ul > li:hover{
 .activityContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.progressbarContainer > button {
+  background-color: #a8e063;
+  border: .1rem solid black;
+  border-radius: 20%;
+  font-size: 1.4rem;
+  display: flex;
+  width: 50%;
+  margin-top: 1rem;
+  justify-content: center;
 }
