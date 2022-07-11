@@ -29,3 +29,17 @@ nav > ul > li:hover{
   border-color: white;
   color: white;
 }
+
+.progressbarContainer {
+  width: 30%;
+}
+
+.allActivities {
+  display: flex;
+  margin-left: 3rem;
+}
+
+.activityContainer {
+  display: flex;
+  flex-direction: column;
+}
