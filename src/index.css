@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+nav > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+nav > ul > li {
+  margin: 1rem;
+  padding: 1rem;
+  border: .2rem solid black;
+}
+
+nav > ul > li:hover{
+  background-color: black;
+  border-color: white;
+  color: white;
+}
