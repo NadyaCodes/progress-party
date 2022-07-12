@@ -22,6 +22,7 @@ nav > ul > li {
   margin: 1rem;
   padding: 1rem;
   border: .2rem solid black;
+  z-index: 2;
 }
 
 nav > ul > li:hover{
@@ -61,4 +62,117 @@ nav > ul > li:hover{
 button .reset {
   background-color: #304b0f;
   color: white;
+}
+
+.party {
+  background: linear-gradient(270deg, #a8e063, #636be0, #e063c9, #d1e063);
+  background-size: 600% 600%;
+  /* background-size: 600%; */
+  animation: PartyBackground 2s linear infinite;
+
+}
+
+@keyframes PartyBackground {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.emoji {
+  width: 20%;
+}
+
+.emoji-1 {
+  position: absolute;
+  left: 32%;
+  backface-visibility: hidden;
+  transform: rotate(-10deg);
+  animation-name: party;
+  animation-duration: 1.7s;
+  animation-delay: .36s;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+.emoji-2 {
+  opacity: 0;
+  position: absolute;
+  left: 6%;
+  backface-visibility: hidden;
+  transform: rotate(-10deg);
+  animation-name: party;
+  animation-duration: 1.7s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+.emoji-3 {
+  opacity: 0;
+  position: absolute;
+  left: 55%;
+  backface-visibility: hidden;
+  transform: rotate(-10deg);
+  animation-name: party;
+  animation-duration: 1.7s;
+  animation-delay: .3s;
+  animation-iteration-count: infinite;
+}
+.emoji-4 {
+  opacity: 0;
+  position: absolute;
+  left: 78%;
+  backface-visibility: hidden;
+  transform: rotate(-10deg);
+  animation-name: party;
+  animation-duration: 1.7s;
+  animation-delay: .65s;
+  animation-iteration-count: infinite;
+}
+
+
+
+
+@keyframes party {
+  0% {
+    animation-timing-function: ease-out;
+    transform: rotate(-10deg) translateY(0px);
+    opacity: 1;
+  }
+  12.5% {
+    animation-timing-function: ease-in;
+    transform: rotate(-10deg) translateY(-240px);
+  }
+  25% {
+    animation-timing-function: ease-out;
+    transform: rotate(-10deg) translateY(0px);
+  }
+  37.5% {
+    animation-timing-function: ease-in;
+    transform: rotate(0deg) translateY(-140px);
+  }
+  50% {
+    animation-timing-function: ease-out;
+    transform: rotate(10deg) translateY(0px);
+  }
+  62.5% {
+    animation-timing-function: ease-in;
+    transform: rotate(10deg) translateY(-240px);
+  }
+  75% {
+    animation-timing-function: ease-out;
+    transform: rotate(10deg) translateY(0px);
+  }
+  87.5% {
+    animation-timing-function: ease-in;
+    transform: rotate(0deg) translateY(-140px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.party-container {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
 }

@@ -6,13 +6,23 @@ export default function Nav({state, setState}) {
       : setState(prev => ({...prev, progress: true}))
   }
 
+  const toggleParty = () => {
+    state.party === true ?
+      setState(prev => ({...prev, party: false}))
+      : setState(prev => ({...prev, party: true}))
+  }
+
+  const toggleAll = () => {
+    setState(prev => ({...prev, party: false, progress: false}))
+  }
+
 
   return(
     <nav>
       <ul>
-        <li>Home</li>
+        <li onClick={toggleAll}>Home</li>
         <li onClick={toggleProgress}>Progress</li>
-        <li>Party</li>
+        <li onClick={toggleParty}>Party</li>
       </ul>
     </nav>
   )

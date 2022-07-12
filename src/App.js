@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Nav from './navigation'
 import Progress from './progress'
+import Party from './party'
 import React, {useEffect, useState} from 'react'
 
 function App() {
@@ -10,16 +11,19 @@ function App() {
 
   const [state, setState] = useState({
     progress: false,
-    currentProgress: startingProgress
+    currentProgress: startingProgress,
+    party: false,
   })
 
 
   return (
-
-    <main>
-      < Nav setState={setState} state={state}/>
-      {state.progress && < Progress state={state} setState={setState}/>}
-    </main>
+    <div className={state.party ? "party" : ''}>
+      <main>
+        < Nav setState={setState} state={state}/>
+        {state.progress && < Progress state={state} setState={setState}/>}
+        {state.party && <Party/>}
+      </main>
+    </div>
   );
 }
 
