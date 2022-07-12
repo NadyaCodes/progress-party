@@ -4,22 +4,39 @@ import confetti from 'canvas-confetti'
 
 
 
-export default function Progress() {
-  const [percentage, setPercentage] = useState({ Knitting: 10, Dance: 20, Coding: 50})
+export default function Progress(props) {
+  const {state, setState} = props;
+  let progressObj = state.currentProgress
 
-  const activitesArray = Object.keys(percentage)
+  const activitesArray = Object.keys(progressObj)
+
+  const resetPercent = (activity) => {
+
+    setState(prevState => ({
+      ...prevState,
+        currentProgress: {
+          ...prevState.currentProgress,
+            [activity]: 0
+        }
+    }))
+  }
 
   const changePercent = (activity) => {
-    let newNum = percentage[activity] += 10;
+    let origNum = progressObj[activity]
+    let newNum =  origNum + 10;
+
     if (newNum === 100) {
       confetti();
     }
-    if (newNum > 100) {
-      newNum = 10;
-    }
-    const newPercentage = {...percentage}
-    newPercentage[activity] = newNum
-    setPercentage(newPercentage);
+
+    setState(prevState => ({
+      ...prevState,
+        currentProgress: {
+          ...prevState.currentProgress,
+            [activity]: newNum
+        }
+    }))
+
   }
 
 
@@ -31,7 +48,7 @@ export default function Progress() {
           <h2>{activity}</h2>
         <div className="progressbarContainer">
           <Progressbar
-            input={percentage[activity]}
+            input={progressObj[activity]}
             pathWidth={10}
             pathColor={['#56ab2f', '#a8e063']}
             trailWidth={15}
@@ -39,7 +56,8 @@ export default function Progress() {
             textStyle={{ fill: 'blue' }}
           >
           </Progressbar>
-          <button onClick={() => changePercent(activity)}>Up</button>
+          <button className="upvote" onClick={() => changePercent(activity)}>Up</button>
+          <button className="reset" onClick={() => resetPercent(activity)}>Reset</button>
         </div>
       </div>
       )}

@@ -5,35 +5,21 @@ import Progress from './progress'
 import React, {useEffect, useState} from 'react'
 
 function App() {
-  // const [page, setPage] = useState("Home")
 
-  // useEffect(() => {
-  //   setPage(target)
-  // }, [click])
+  const startingProgress = { Knitting: 10, Dance: 20, Coding: 50};
+
+  const [state, setState] = useState({
+    progress: false,
+    currentProgress: startingProgress
+  })
+
 
   return (
 
     <main>
-      < Nav/>
-      < Progress/>
-      {/* {page} */}
+      < Nav setState={setState} state={state}/>
+      {state.progress && < Progress state={state} setState={setState}/>}
     </main>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
   );
 }
 
