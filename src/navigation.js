@@ -12,8 +12,14 @@ export default function Nav({state, setState}) {
       : setState(prev => ({...prev, party: true}))
   }
 
+  const togglePic = () => {
+    state.pic === true ?
+      setState(prev => ({...prev, pic: false}))
+      : setState(prev => ({...prev, pic: true}))
+  }
+
   const toggleAll = () => {
-    setState(prev => ({...prev, party: false, progress: false}))
+    setState(prev => ({...prev, party: false, progress: false, pic: false}))
   }
 
 
@@ -23,6 +29,7 @@ export default function Nav({state, setState}) {
         <li onClick={toggleAll}>Home</li>
         <li onClick={toggleProgress}>Progress</li>
         <li onClick={toggleParty}>Party</li>
+        <li onClick={togglePic}>Pic of the Day</li>
       </ul>
     </nav>
   )
