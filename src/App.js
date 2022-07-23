@@ -10,11 +10,11 @@ import React, {useEffect, useState} from 'react'
 
 function App() {
 
-  const startingProgress = { Knitting: 10, Dance: 20, Coding: 50};
+  // const startingProgress = { Knitting: 10, Dance: 20, Coding: 50};
 
   const [state, setState] = useState({
     progress: false,
-    currentProgress: startingProgress,
+    currentProgress: {},
     party: false,
     pic: false,
     drink: true
