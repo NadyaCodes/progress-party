@@ -46,10 +46,18 @@ export default function Progress(props) {
   }
 
 
+  const deleteActivity = (option) => {
+    const newCurrentProgress = {...state.currentProgress} 
+    delete newCurrentProgress[option]
+    setState(prev => ({
+      ...prev, currentProgress: newCurrentProgress
+    }))
+  }
 
   return (
     <div className='activities-container'>
-      {showMakeActivity && <AddActivity />}
+      <button onClick={() => toggleShowActivity()}>Add New Activity</button>
+      {showMakeActivity && <AddActivity state={state} setState={setState}/>}
     <section className="allActivities">
       {activitesArray.map(activity =>
         <div className="activityContainer">
@@ -66,12 +74,13 @@ export default function Progress(props) {
           </Progressbar>
           <button className="upvote" onClick={() => changePercent(activity)}>Up</button>
           <button className="reset" onClick={() => resetPercent(activity)}>Reset</button>
+          <button className="delete" onClick={() => deleteActivity(activity)}>Delete</button>
         </div>
       </div>
       )}
      
       </section>
-      <button onClick={() => toggleShowActivity()}>Add New Activity</button>
+
     </div>
   )
 }
