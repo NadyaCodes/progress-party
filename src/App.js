@@ -4,6 +4,7 @@ import Nav from './navigation'
 import Progress from './progress'
 import Party from './party'
 import Pic from './pic'
+import Drink from './drink'
 import React, {useEffect, useState} from 'react'
 
 
@@ -15,7 +16,8 @@ function App() {
     progress: false,
     currentProgress: startingProgress,
     party: false,
-    pic: false
+    pic: false,
+    drink: true
   })
 
 
@@ -25,7 +27,8 @@ function App() {
         < Nav setState={setState} state={state}/>
         <section className='content'>
           {state.progress && < Progress state={state} setState={setState}/>}
-          {state.pic && <Pic/>}
+          {/* {state.pic && <Pic/>}
+          {state.drink && <Drink/>} */}
         </section>
         {state.party && <Party/>}
         

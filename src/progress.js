@@ -42,6 +42,7 @@ export default function Progress(props) {
 
 
   return (
+    <div className='activities-container'>
     <section className="allActivities">
       {activitesArray.map(activity =>
         <div className="activityContainer">
@@ -61,6 +62,9 @@ export default function Progress(props) {
         </div>
       </div>
       )}
-    </section>
+     
+      </section>
+      <button>Add New Activity</button>
+    </div>
   )
 }
