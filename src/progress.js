@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import Progressbar from 'react-js-progressbar'
 import confetti from 'canvas-confetti'
+import AddActivity from './AddActivity';
 
 
 
 export default function Progress(props) {
   const {state, setState} = props;
+  const [showMakeActivity, setShowMakeActivity] = useState(false)
   let progressObj = state.currentProgress
 
   const activitesArray = Object.keys(progressObj)
@@ -39,10 +41,15 @@ export default function Progress(props) {
 
   }
 
+  const toggleShowActivity = () => {
+    showMakeActivity ? setShowMakeActivity(false) : setShowMakeActivity(true)
+  }
+
 
 
   return (
     <div className='activities-container'>
+      {showMakeActivity && <AddActivity />}
     <section className="allActivities">
       {activitesArray.map(activity =>
         <div className="activityContainer">
@@ -64,7 +71,7 @@ export default function Progress(props) {
       )}
      
       </section>
-      <button>Add New Activity</button>
+      <button onClick={() => toggleShowActivity()}>Add New Activity</button>
     </div>
   )
 }
