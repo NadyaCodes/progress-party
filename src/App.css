@@ -43,10 +43,31 @@ button {
   color: black;
   border: .2rem solid black;
   margin: 1rem;
-  border-radius: 50%;
+  border-radius: 10%;
   padding: 2rem;
   width: 20rem;
 }
+
+button:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 0 10px 10px rgba(0,0,0,0.35);
+}
+
+button:hover::after {
+  opacity: 1;
+}
+
+/* button::after {
+  color: blue;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+button:hover {
+  color: purple;
+  opacity: 1;
+} */
 
 .upvote, .reset, .delete {
   width: 5rem;
@@ -57,13 +78,15 @@ button {
   margin: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: left;
 }
 
 
 .new-activity-input {
   display: flex;
   flex-direction: column;
+  max-width: 30rem;
+  /* float: left; */
 }
 
 .new-activity-input > button {

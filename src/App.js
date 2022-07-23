@@ -25,12 +25,13 @@ function App() {
     <div className={state.party ? "party" : ''}>
       <main>
         < Nav setState={setState} state={state}/>
+        {state.party && <Party/>}
         <section className='content'>
           {state.progress && < Progress state={state} setState={setState}/>}
           {/* {state.pic && <Pic/>}
           {state.drink && <Drink/>} */}
         </section>
-        {state.party && <Party/>}
+
         
       </main>
     </div>

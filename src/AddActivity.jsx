@@ -1,7 +1,7 @@
 import {useState} from 'react'
 
 export default function AddActivity(props) {
-  const {state, setState} = props
+  const {state, setState, toggleShowActivity} = props
 
   const [activity, setActivity] = useState('')
 
