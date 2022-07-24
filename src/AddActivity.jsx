@@ -7,6 +7,7 @@ export default function AddActivity(props) {
 
   const submitActivity = () => {
     setState(prev => ({...prev, currentProgress: {...prev.currentProgress, [activity]: 0}}))
+    setActivity('')
   }
 
   const handleActivity = (event) => {

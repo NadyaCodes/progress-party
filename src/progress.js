@@ -59,7 +59,7 @@ export default function Progress(props) {
       <button onClick={() => toggleShowActivity()}>Add New Activity</button>
       {showMakeActivity && <AddActivity state={state} setState={setState}/>}
     <section className="allActivities">
-      {activitesArray.map(activity =>
+      {activitesArray.map((activity, index) =>
         <div className="activityContainer">
           <h2>{activity}</h2>
         <div className="progressbarContainer">
@@ -71,6 +71,7 @@ export default function Progress(props) {
             trailWidth={15}
             trailColor='#363636'
             textStyle={{ fill: 'blue' }}
+            key={index}
           >
           </Progressbar>
           </div>

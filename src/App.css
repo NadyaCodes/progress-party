@@ -57,6 +57,10 @@ button:hover::after {
   opacity: 1;
 }
 
+h2 {
+  font-family: cursive;
+}
+
 
 .upvote, .reset, .delete {
   width: 5rem;
