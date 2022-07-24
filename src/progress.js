@@ -79,7 +79,7 @@ export default function Progress(props) {
           <button className="delete" onClick={() => deleteActivity(activity)}>Delete</button>
         </div>
       </div>
-      )}
+      ).reverse()}
      
       </section>
 
