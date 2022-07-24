@@ -39,7 +39,7 @@
 
 button {
   font-size: 1rem;
-  background-color: white;
+  background-color: transparent;
   color: black;
   border: .1rem solid black;
   margin: 1rem;
@@ -75,7 +75,6 @@ button:hover::after {
   display: flex;
   flex-direction: column;
   width: 30rem;
-  /* float: left; */
 }
 
 .new-activity-input > button {
@@ -94,30 +93,23 @@ button:hover::after {
 input {
   border: .1rem solid black;
   margin-left: 1rem;
-  /* border-bottom:  */
 }
 
 input:focus {
   outline: purple double .2rem;
-  /* border: .3rem dotted black; */
-  /* border-bottom:  */
 }
 
 .activityContainer {
-  display: flex;
-  flex-direction: row;
-  border: .1rem solid black;
-  padding: 0 1rem;
-  margin: 1rem;
-  /* width: 100%; */
-  /* height: 8rem; */
+  display: grid;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
 }
 
 .progressbarContainer {
   display: flex;
   flex-direction: row;
   width: 50%;
-  padding: .5rem 2rem;
+  height: 7rem;
 }
 
 .progressbarContainer > button {
@@ -127,12 +119,8 @@ input:focus {
 }
 
 .progress-circle {
-  min-width: 30%;
-  min-height: 30%;
-  padding: .3rem .3rem;
+  width: 15rem;
+  height: 15rem;
+  padding-bottom: .3rem;
   margin-right: .5rem;
 }
-
-/* svg {
-  
-} */
