@@ -37,10 +37,35 @@
   }
 }
 
+nav {
+  background-color: rgb(88, 162, 162);
+}
+
+nav > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+nav > ul > li {
+  margin: 1rem;
+  padding: 1rem;
+  border: .2rem solid rgb(4, 39, 39);
+  z-index: 2;
+}
+
+nav > ul > li:hover{
+  background-color: rgb(4, 39, 39);
+  border-color: rgb(196, 241, 241);
+  color: rgb(196, 241, 241);
+  border-radius: 10%;
+}
+
+
 button {
   font-size: 1rem;
   background-color: transparent;
-  color: black;
+  color: rgb(4, 39, 39);
   border: .1rem solid black;
   margin: 1rem;
   border-radius: 10%;

@@ -12,24 +12,6 @@ code {
     monospace;
 }
 
-nav > ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-}
-
-nav > ul > li {
-  margin: 1rem;
-  padding: 1rem;
-  border: .2rem solid black;
-  z-index: 2;
-}
-
-nav > ul > li:hover{
-  background-color: black;
-  border-color: white;
-  color: white;
-}
 
 .progressbarContainer {
   width: 30%;
