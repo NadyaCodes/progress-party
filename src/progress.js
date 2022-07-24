@@ -63,6 +63,7 @@ export default function Progress(props) {
         <div className="activityContainer">
           <h2>{activity}</h2>
         <div className="progressbarContainer">
+          <div className='progress-circle'>
           <Progressbar
             input={progressObj[activity]}
             pathWidth={10}
@@ -72,6 +73,7 @@ export default function Progress(props) {
             textStyle={{ fill: 'blue' }}
           >
           </Progressbar>
+          </div>
           <button className="upvote" onClick={() => changePercent(activity)}>Up</button>
           <button className="reset" onClick={() => resetPercent(activity)}>Reset</button>
           <button className="delete" onClick={() => deleteActivity(activity)}>Delete</button>
