@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Progressbar from 'react-js-progressbar'
 import confetti from 'canvas-confetti'
 import AddActivity from './AddActivity';
+import ShowStar from './ShowStar';
 
 
 
@@ -57,6 +58,12 @@ export default function Progress(props) {
     }))
   }
 
+  // const showStar = () => {
+  //   return(
+  //     <div>Star</div>
+  //   )
+  // }
+
   return (
     <div className='activities-container'>
       <button onClick={() => toggleShowActivity()} className='secondary'>Add New Activity</button>
@@ -65,9 +72,10 @@ export default function Progress(props) {
       {activitesArray.map((activity, index) =>
         <div className="activityContainer">
           <h2>{activity}</h2>
-          {star[activity] && <div>Star</div>}
+          
         <div className="progressbarContainer">
           <div className='progress-circle'>
+          {star[activity] ? < ShowStar/> : 
           <Progressbar
             input={progressObj[activity]}
             pathWidth={10}
@@ -77,11 +85,12 @@ export default function Progress(props) {
             textStyle={{ fill: '#1b7272' }}
             key={index}
           >
-          </Progressbar>
+          </Progressbar>}
           </div>
           <button className="upvote secondary" onClick={() => changePercent(activity)}>Up</button>
           <button className="reset secondary" onClick={() => resetPercent(activity)}>Reset</button>
           <button className="delete secondary" onClick={() => deleteActivity(activity)}>Delete</button>
+          
         </div>
       </div>
       ).reverse()}

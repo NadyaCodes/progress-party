@@ -167,3 +167,17 @@ input:focus {
   padding-bottom: .3rem;
   margin-right: .5rem;
 }
+
+.star {
+  font-size: 6rem;
+  margin-top: 3.5rem;
+  animation: .3s linear 1 spin;
+  color: gold;
+  text-shadow: 0 3px 5px rgba(0,0,0,0.35);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
