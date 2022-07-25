@@ -31,16 +31,6 @@ code {
   align-items: center;
 }
 
-.progressbarContainer > button {
-  background-color: #a8e063;
-  border: .1rem solid black;
-  border-radius: 20%;
-  font-size: 1.4rem;
-  display: inline-block;
-  margin-top: 1rem;
-  justify-content: center;
-}
-
 button .reset {
   background-color: #304b0f;
   color: white;

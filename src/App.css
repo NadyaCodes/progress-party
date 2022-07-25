@@ -90,6 +90,7 @@ h2 {
 .upvote, .reset, .delete {
   width: 5rem;
   padding: .5rem;
+  background-color:rgb(88, 162, 162)
 }
 
 .activities-container {
@@ -97,6 +98,15 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: left;
+}
+
+.secondary {
+  background-color:rgb(88, 162, 162);
+  color: rgb(231, 250, 250);
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.35);
 }
 
 

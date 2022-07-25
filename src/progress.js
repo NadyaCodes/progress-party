@@ -56,7 +56,7 @@ export default function Progress(props) {
 
   return (
     <div className='activities-container'>
-      <button onClick={() => toggleShowActivity()}>Add New Activity</button>
+      <button onClick={() => toggleShowActivity()} className='secondary'>Add New Activity</button>
       {showMakeActivity && <AddActivity state={state} setState={setState}/>}
     <section className="allActivities">
       {activitesArray.map((activity, index) =>
@@ -75,9 +75,9 @@ export default function Progress(props) {
           >
           </Progressbar>
           </div>
-          <button className="upvote" onClick={() => changePercent(activity)}>Up</button>
-          <button className="reset" onClick={() => resetPercent(activity)}>Reset</button>
-          <button className="delete" onClick={() => deleteActivity(activity)}>Delete</button>
+          <button className="upvote secondary" onClick={() => changePercent(activity)}>Up</button>
+          <button className="reset secondary" onClick={() => resetPercent(activity)}>Reset</button>
+          <button className="delete secondary" onClick={() => deleteActivity(activity)}>Delete</button>
         </div>
       </div>
       ).reverse()}

@@ -17,6 +17,6 @@ export default function AddActivity(props) {
   return(
     <section className='new-activity-input'>
       <input type='text' name='newActivityName' id='newActivityName' value={activity} onChange={handleActivity}/>
-      <button onClick={() => submitActivity()}>Add it!</button>
+      <button onClick={() => submitActivity()} className='secondary'>Add it!</button>
     </section>)
 }
