@@ -8,6 +8,7 @@ import AddActivity from './AddActivity';
 export default function Progress(props) {
   const {state, setState} = props;
   const [showMakeActivity, setShowMakeActivity] = useState(false)
+  const [star, setStar] = useState({})
   let progressObj = state.currentProgress
 
   const activitesArray = Object.keys(progressObj)
@@ -21,6 +22,7 @@ export default function Progress(props) {
             [activity]: 0
         }
     }))
+    setStar((prev) => ({...prev, [activity]: false}));
   }
 
   const changePercent = (activity) => {
@@ -29,6 +31,7 @@ export default function Progress(props) {
 
     if (newNum === 100) {
       confetti();
+      setStar((prev) => ({...prev, [activity]: true}));
     }
 
     setState(prevState => ({
@@ -62,6 +65,7 @@ export default function Progress(props) {
       {activitesArray.map((activity, index) =>
         <div className="activityContainer">
           <h2>{activity}</h2>
+          {star[activity] && <div>Star</div>}
         <div className="progressbarContainer">
           <div className='progress-circle'>
           <Progressbar

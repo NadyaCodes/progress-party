@@ -52,13 +52,13 @@ nav > ul > li {
   padding: 1rem;
   border: .2rem solid rgb(4, 39, 39);
   z-index: 2;
+  border-radius: .2rem;
 }
 
 nav > ul > li:hover{
   background-color: rgb(4, 39, 39);
   border-color: rgb(196, 241, 241);
   color: rgb(196, 241, 241);
-  border-radius: .2rem;
 }
 
 
