@@ -58,7 +58,7 @@ nav > ul > li:hover{
   background-color: rgb(4, 39, 39);
   border-color: rgb(196, 241, 241);
   color: rgb(196, 241, 241);
-  border-radius: 10%;
+  border-radius: .2rem;
 }
 
 
@@ -68,7 +68,7 @@ button {
   color: rgb(4, 39, 39);
   border: .1rem solid black;
   margin: 1rem;
-  border-radius: 10%;
+  border-radius: .3rem;
   padding: 1rem;
   width: 7rem;
 }
@@ -83,7 +83,7 @@ button:hover::after {
 }
 
 h2 {
-  font-family: cursive;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
@@ -131,6 +131,7 @@ h2 {
 
 input {
   border: .1rem solid black;
+  border-radius: .2rem;
   margin-left: 1rem;
 }
 
@@ -144,6 +145,10 @@ input:focus {
   margin-bottom: 2rem;
 }
 
+.activityContainer:not(:first-child) {
+  border-top: .1rem solid black;
+}
+
 .progressbarContainer {
   display: flex;
   flex-direction: row;
@@ -152,7 +157,6 @@ input:focus {
 }
 
 .progressbarContainer > button {
-  font-size: 1.1rem;
   width: 10rem;
   margin: .5rem;
 }
