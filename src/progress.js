@@ -67,10 +67,10 @@ export default function Progress(props) {
           <Progressbar
             input={progressObj[activity]}
             pathWidth={10}
-            pathColor={['#56ab2f', '#a8e063']}
+            pathColor={['#e7fafa', '#57a2a2']}
             trailWidth={15}
-            trailColor='#363636'
-            textStyle={{ fill: 'blue' }}
+            trailColor='#282c34'
+            textStyle={{ fill: '#1b7272' }}
             key={index}
           >
           </Progressbar>
